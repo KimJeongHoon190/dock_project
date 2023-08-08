@@ -20,7 +20,7 @@ pipeline {
                     // Docker hub 에 로그인 하기 위해 사용
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
                         // Dockerfile 로 이미지 생성
-                        docker.build('hedgehoon/httpd', './ubuntu_apache2')
+                        docker.build('hedgehoon/httpd', '--no-cache ./ubuntu_apache2')
                     }
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
                     // Docker hub 에 로그인 하기 위해 사용
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
                         // Dockerfile 로 이미지 생성
-                        docker.build('hedgehoon/nginx', './ubuntu_nginx')
+                        docker.build('hedgehoon/nginx', '--no-cache ./ubuntu_nginx')
                     }
                 }
             }
@@ -42,7 +42,7 @@ pipeline {
                     // Docker hub 에 로그인 하기 위해 사용
                     docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
                         // Dockerfile 로 이미지 생성
-                        docker.build('hedgehoon/loadbalancer', './ubuntu_nginx_loadbalancer')
+                        docker.build('hedgehoon/loadbalancer', '--no-cache ./ubuntu_nginx_loadbalancer')
                     }
                 }
             }
