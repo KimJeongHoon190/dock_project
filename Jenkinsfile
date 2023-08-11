@@ -59,9 +59,9 @@ pipeline {
                         httpd_img.push('latest')
                         nginx_img.push('latest')
                         loadbalancer_img.push('latest')
-                        //httpd_img.push('2.5')
-                        //nginx_img.push('2.5')
-                        //loadbalancer_img.push('2.5')
+                        httpd_img.push('2.7')
+                        nginx_img.push('2.7')
+                        loadbalancer_img.push('2.7')
                     }
                 }
             }
